@@ -1,0 +1,6 @@
+POST http://localhost:3000/videos
+Content-Type: application/json
+
+{
+  "fileInput": "s3://sample-media-content/video/fish85674.mp4"
+}

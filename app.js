@@ -12,5 +12,6 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', require('./src/routes/index'))
+app.use('/videos', require('./src/routes/videos'))
 
 module.exports = app
