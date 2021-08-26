@@ -1,0 +1,16 @@
+### 컨테이너 생성
+POST http://localhost:3000/storage/containers
+Content-Type: application/json
+
+{
+  "name": "my-container"
+}
+
+### 컨테이너 리스트 조회
+GET http://localhost:3000/storage/containers
+
+### 컨테이너 조회
+GET http://localhost:3000/storage/containers/my-container
+
+### 컨테이너 삭제
+DELETE http://localhost:3000/storage/containers/my-container

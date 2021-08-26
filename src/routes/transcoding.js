@@ -1,10 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const AWS = require('../config/aws')
-const mediaconvert = new AWS.MediaConvert({
-  endpoint: process.env.MEDIACONVERT_ENDPOINT
-})
+const mediaconvert = require('../aws/elemental/mediaconvert')
 
 router.post('/jobs', (req, res, next) => {
   const {
@@ -127,10 +124,10 @@ router.patch('/jobs/:jobId/cancel', (req, res, next) => {
 router.post('/queues', (req, res, next) => {
   const { name, description, pricingPlan, status } = req.body
   const params = {
-    Name: name,
-    Description: description,
-    PricingPlan: pricingPlan,
-    Status: status,
+    "Name": name,
+    "Description": description,
+    "PricingPlan": pricingPlan,
+    "Status": status,
   }
 
   mediaconvert.createQueue(params, (err, data) => {
@@ -164,9 +161,9 @@ router.put('/queues/:name', (req, res, next) => {
   const { name } = req.params
   const { description, status } = req.body
   const params = {
-    Name: name,
-    Description: description,
-    Status: status,
+    "Name": name,
+    "Description": description,
+    "Status": status,
   }
 
   mediaconvert.updateQueue(params, (err, data) => {

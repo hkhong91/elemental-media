@@ -1,22 +1,22 @@
 ### 트랜스코딩 작업 생성
-POST http://localhost:3000/mediaconvert/jobs
+POST http://localhost:3000/transcoding/jobs
 Content-Type: application/json
 
 {
-  "file": "fish85674.mp4",
+  "file": "fish85674.mp4"
 }
 
 ### 트랜스코딩 작업 리스트 조회
-GET http://localhost:3000/mediaconvert/jobs
+GET http://localhost:3000/transcoding/jobs
 
 ### 트랜스코딩 작업 조회
-GET http://localhost:3000/mediaconvert/jobs/1629971404990-wvkyih
+GET http://localhost:3000/transcoding/jobs/1629971404990-wvkyih
 
 ### 트랜스코딩 작업 취소
-PATCH http://localhost:3000/mediaconvert/jobs/1629971404990-wvkyih/cancel
+PATCH http://localhost:3000/transcoding/jobs/1629971404990-wvkyih/cancel
 
 ### 트랜스코딩 큐 생성
-POST http://localhost:3000/mediaconvert/queues
+POST http://localhost:3000/transcoding/queues
 Content-Type: application/json
 
 {
@@ -27,13 +27,13 @@ Content-Type: application/json
 }
 
 ### 트랜스코딩 큐 리스트 조회
-GET http://localhost:3000/mediaconvert/queues
+GET http://localhost:3000/transcoding/queues
 
 ### 트랜스코딩 큐 조회
-GET http://localhost:3000/mediaconvert/queues/Default
+GET http://localhost:3000/transcoding/queues/Default
 
 ### 트랜스코딩 큐 수정
-PUT http://localhost:3000/mediaconvert/queues/Second
+PUT http://localhost:3000/transcoding/queues/Second
 Content-Type: application/json
 
 {
@@ -42,4 +42,4 @@ Content-Type: application/json
 }
 
 ### 트랜스코딩 큐 삭제
-DELETE http://localhost:3000/mediaconvert/queues/Second
+DELETE http://localhost:3000/transcoding/queues/Second

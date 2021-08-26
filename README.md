@@ -1,7 +1,5 @@
 # AWS Elemental Media
 
-### AWS Credentials Setting
-
 ~/.aws/credentials
 
 ```
@@ -9,6 +7,8 @@
 aws_access_key_id = <DEFAULT_ACCESS_KEY_ID>
 aws_secret_access_key = <DEFAULT_SECRET_ACCESS_KEY>
 ```
+
+Also check the .env file.
 
 ## MediaConvert
 
@@ -18,13 +18,11 @@ Guide:
 API Docs:
 * [MediaConvert](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html)
 
-Transcoding process:
+Process:
 1. S3 Bucket 생성
 2. IAM Role 설정
 3. 생성한 Bucket에 파일 업로드
 4. 작업 생성
-
-Also check the .env file.
 
 ## MediaLive
 
@@ -36,7 +34,10 @@ API Docs:
 * [MediaPackage](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaPackage.html)
 * [MediaStore](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaStore.html)
 
-Streaming process:
+Broadcast Client:
+* [OBS Studio](https://obsproject.com/)
+
+Process:
 1. S3 Bucket 생성
 2. IAM Role 설정
 3. Target 설정 (MediaStore or MediaPackage)
