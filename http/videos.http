@@ -1,6 +1,45 @@
-POST http://localhost:3000/videos
+### 트랜스코딩 작업 생성
+POST http://localhost:3000/mediaconvert/jobs
 Content-Type: application/json
 
 {
-  "fileInput": "s3://sample-media-content/video/fish85674.mp4"
+  "file": "fish85674.mp4",
 }
+
+### 트랜스코딩 작업 리스트 조회
+GET http://localhost:3000/mediaconvert/jobs
+
+### 트랜스코딩 작업 조회
+GET http://localhost:3000/mediaconvert/jobs/1629971404990-wvkyih
+
+### 트랜스코딩 작업 취소
+PATCH http://localhost:3000/mediaconvert/jobs/1629971404990-wvkyih/cancel
+
+### 트랜스코딩 큐 생성
+POST http://localhost:3000/mediaconvert/queues
+Content-Type: application/json
+
+{
+  "name": "Second",
+  "description": "두번째",
+  "pricingPlan": "ON_DEMAND",
+  "status": "ACTIVE"
+}
+
+### 트랜스코딩 큐 리스트 조회
+GET http://localhost:3000/mediaconvert/queues
+
+### 트랜스코딩 큐 조회
+GET http://localhost:3000/mediaconvert/queues/Default
+
+### 트랜스코딩 큐 수정
+PUT http://localhost:3000/mediaconvert/queues/Second
+Content-Type: application/json
+
+{
+  "description": "투",
+  "status": "PAUSED"
+}
+
+### 트랜스코딩 큐 삭제
+DELETE http://localhost:3000/mediaconvert/queues/Second

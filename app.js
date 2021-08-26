@@ -2,6 +2,7 @@ var express = require('express')
 var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
+require('dotenv').config()
 
 var app = express()
 
@@ -11,7 +12,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', require('./src/routes/index'))
-app.use('/videos', require('./src/routes/videos'))
+app.use('/mediaconvert', require('./src/routes/mediaconvert'))
 
 module.exports = app
