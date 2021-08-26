@@ -36,7 +36,7 @@ API Docs:
 * [MediaPackage](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaPackage.html)
 * [MediaStore](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaStore.html)
 
-Transcoding process:
+Streaming process:
 1. S3 Bucket 생성
 2. IAM Role 설정
 3. Target 설정 (MediaStore or MediaPackage)
