@@ -43,3 +43,12 @@ Process:
 3. Target 설정 (MediaStore or MediaPackage)
 4. 비디오 선택
 5. 채널 생성
+
+Simple Action:
+1. MediaPackage Channel 생성
+2. MediaPackage Channel - Endpoint 생성 - CloudFront 설정(CORS)
+3. MediaLive Input Security Group 생성
+4. MediaLive Input 생성
+5. MediaLive Channel - with Input & MediaPacakage Channel
+6. OBS Studio 방송 설정 - 서비스 사용자 지정 (서버,스트림키 입력)
+7. CloudFront URL로 접근
