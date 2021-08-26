@@ -1,4 +1,4 @@
-var AWS = require('aws-sdk')
+const AWS = require('aws-sdk')
 
 AWS.config.credentials = new AWS.SharedIniFileCredentials({profile: 'jaeme'})
 AWS.config.update({

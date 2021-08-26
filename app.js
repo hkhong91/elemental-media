@@ -13,5 +13,6 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/mediaconvert', require('./src/routes/mediaconvert'))
+app.use('/medialive', require('./src/routes/medialive'))
 
 module.exports = app

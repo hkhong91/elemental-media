@@ -1,8 +1,8 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const router = express.Router()
 
-var AWS = require('../config/aws')
-var mediaconvert = new AWS.MediaConvert({
+const AWS = require('../config/aws')
+const mediaconvert = new AWS.MediaConvert({
   endpoint: process.env.MEDIACONVERT_ENDPOINT
 })
 
@@ -14,6 +14,7 @@ router.post('/jobs', (req, res, next) => {
   const nameModifier = "_myname"
   const segmentModifier = "_mysegment"
 
+  // default. more in the docs.
   const params = {
     "Settings": {
       "Inputs": [
