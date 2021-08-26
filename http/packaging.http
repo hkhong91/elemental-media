@@ -23,3 +23,29 @@ Content-Type: application/json
 
 ### 채널 삭제
 DELETE http://localhost:3000/packaging/channels/my-packaging
+
+### 채널 앤드포인트 추가
+POST http://localhost:3000/packaging/channels/my-packaging/endpoints
+Content-Type: application/json
+
+{
+  "endpointId": "my-endpoint",
+  "description": "마이앤드포인트"
+}
+
+### 채널 앤드포인트 리스트 조회
+GET http://localhost:3000/packaging/channels/my-packaging/endpoints
+
+### 채널 앤드포인트 조회
+GET http://localhost:3000/packaging/channels/my-packaging/endpoints/my-endpoint
+
+### 채널 앤드포인트 수정
+PUT http://localhost:3000/packaging/channels/my-packaging/endpoints/my-endpoint
+Content-Type: application/json
+
+{
+  "description": "마이유알엘"
+}
+
+### 채널 앤드포인트 삭제
+DELETE http://localhost:3000/packaging/channels/my-packaging/endpoints/my-endpoint

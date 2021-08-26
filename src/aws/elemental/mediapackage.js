@@ -1,4 +1,4 @@
 const AWS = require('../aws-default')
 
-const mediaPackage = new AWS.MediaPackage()
-module.exports = mediaPackage
+const mediapackage = new AWS.MediaPackage()
+module.exports = mediapackage

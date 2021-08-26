@@ -1,0 +1,42 @@
+### 입력 보안 그룹 생성
+POST http://localhost:3000/live/input-security-groups
+Content-Type: application/json
+
+{
+  "whitelist": ["0.0.0.0/0"]
+}
+
+### 입력 보안 그룹 리스트 조회
+GET http://localhost:3000/live/input-security-groups
+
+### 입력 보안 그룹 조회
+GET http://localhost:3000/live/input-security-groups/1620306
+
+### 입력 보안 그룹 수정
+PUT http://localhost:3000/live/input-security-groups/1620306
+Content-Type: application/json
+
+{
+  "whitelist": ["0.0.0.0/0"]
+}
+
+### 입력 보안 그룹 삭제
+DELETE http://localhost:3000/live/input-security-groups/1620306
+
+### 입력 리스트 조회
+GET http://localhost:3000/live/inputs
+
+### 입력 조회
+GET http://localhost:3000/live/inputs/2808717
+
+### 입력 삭제
+DELETE http://localhost:3000/live/inputs/2808717
+
+### 채널 리스트 조회
+GET http://localhost:3000/live/channels
+
+### 채널 조회
+GET http://localhost:3000/live/channels/2191102
+
+### 채널 삭제
+DELETE http://localhost:3000/live/channels/2191102

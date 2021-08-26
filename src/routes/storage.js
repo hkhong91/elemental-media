@@ -5,7 +5,6 @@ const mediastore = require('../aws/elemental/mediastore')
 
 router.post('/containers', (req, res, next) => {
   const { name } = req.body
-
   const params = {
     "ContainerName": name
   }
@@ -27,12 +26,11 @@ router.get('/containers', (req, res, next) => {
 
 router.get('/containers/:name', (req, res, next) => {
   const { name } = req.params
-
   const params = {
     "ContainerName": name
   }
 
-  mediastore.describeContainer(params, function(err, data) {
+  mediastore.describeContainer(params, (err, data) => {
     if (err) res.status(err.statusCode).json(err)
     else res.json(data)
   })
@@ -40,12 +38,11 @@ router.get('/containers/:name', (req, res, next) => {
 
 router.delete('/containers/:name', (req, res, next) => {
   const { name } = req.params
-
   const params = {
     "ContainerName": name
   }
 
-  mediastore.deleteContainer(params, function(err, data) {
+  mediastore.deleteContainer(params, (err, data) => {
     if (err) res.status(err.statusCode).json(err)
     else res.json(data)
   })

@@ -7,11 +7,10 @@ router.post('/jobs', (req, res, next) => {
   const {
     file,
   } = req.body
-
   const nameModifier = "_myname"
   const segmentModifier = "_mysegment"
 
-  // default. more in the docs.
+  // default. more in the docs. or use the aws console.
   const params = {
     "Settings": {
       "Inputs": [
