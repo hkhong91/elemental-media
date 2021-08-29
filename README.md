@@ -1,6 +1,6 @@
 # AWS Elemental Media
 
-create ~/.aws/credentials
+vi ~/.aws/credentials
 
 ```
 [jaeme]
@@ -8,7 +8,7 @@ aws_access_key_id = <DEFAULT_ACCESS_KEY_ID>
 aws_secret_access_key = <DEFAULT_SECRET_ACCESS_KEY>
 ```
 
-add .env file with your information.
+touch .env
 
 ```
 AWS_DEFAULT_REGION=ap-northeast-2
@@ -18,6 +18,10 @@ MEDIACONVERT_ENDPOINT=https://{string}.mediaconvert.ap-northeast-2.amazonaws.com
 MEDIACONVERT_BUCKET_INPUT=s3://sample-media-content/video/
 MEDIACONVERT_BUCKET_OUTPUT=s3://sample-media-content/video/
 ```
+
+npm install
+
+npm start
 
 ## MediaConvert
 
