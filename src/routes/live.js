@@ -102,7 +102,7 @@ router.delete('/inputs/:inputId', (req, res, next) => {
 })
 
 router.post('/chaanels', (req, rex, next) => {
-  // Where is the json inside the console?
+  // Where is the json inside the console? I forgot..
   const params = {
     CdiInputSpecification: {
       Resolution: SD | HD | FHD | UHD
