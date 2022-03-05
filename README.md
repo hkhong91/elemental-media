@@ -32,10 +32,10 @@ API Docs:
 * [MediaConvert](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/MediaConvert.html)
 
 Process:
-1. S3 Bucket 생성
-2. IAM Role 설정
-3. 생성한 Bucket에 파일 업로드
-4. 작업 생성
+1. Create S3 Bucket
+2. IAM Role Settings
+3. Upload files to the created S3 Bucket
+4. Create Task
 
 ## MediaLive
 
@@ -51,17 +51,17 @@ Broadcast Client:
 * [OBS Studio](https://obsproject.com/)
 
 Process:
-1. S3 Bucket 생성
-2. IAM Role 설정
-3. Target 설정 (MediaStore or MediaPackage)
-4. 비디오 선택
-5. 채널 생성
+1. Create S3 Bucket
+2. IAM Role Settings
+3. Target Settings (MediaStore or MediaPackage)
+4. Select Video
+5. Create Channel
 
 Simple Action:
-1. MediaPackage Channel 생성
-2. MediaPackage Channel - Endpoint 생성 - CloudFront 설정(CORS)
-3. MediaLive Input Security Group 생성
-4. MediaLive Input 생성
+1. Create MediaPackage Channel
+2. MediaPackage Channel - Create endpoint - CloudFront Settings (CORS)
+3. Create MediaLive Input Security Group
+4. Create MediaLive Input
 5. MediaLive Channel - with Input & MediaPacakage Channel
-6. OBS Studio 방송 설정 - 서비스 사용자 지정 (서버,스트림키 입력)
-7. CloudFront URL로 접근
+6. OBS Studio broadcast settings - service customization (Server, Stream key Input)
+7. Access with CloudFront URL
